@@ -5,6 +5,7 @@ import "./globals.css";
 import Providers from "@/providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { ToastContainer } from "react-toastify";
 
 const font = Font({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </Providers>
+        <ToastContainer limit={3} />
       </body>
     </html>
   );
