@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+img {
+  pointer-events: none;
+}
+
+header,
+footer {
+  @apply responsive-padding;
+}
+
+section {
+  @apply w-full responsive-padding py-12 flex flex-col gap-8;
+}
+
+input,
+select,
+textarea {
+  @apply w-full p-1.5 me-border outline-none ring-0 placeholder:font-light focus:ring-primary border focus:border-primary disabled:bg-dark/10 placeholder:text-dark/40 text-dark;
+}
+
+.absolute-center {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.responsive-padding {
+  @apply 2xl:px-[20%] lg:px-20 md:px-10 px-2;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.me-rounded {
+  @apply rounded;
+}
+.me-border {
+  @apply border border-dark/10 me-rounded;
+}
+
+.me-padding {
+  @apply px-4 py-2;
+}
+
+.me-input {
+  @apply me-border me-padding;
+}
+
+.me-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.me-button {
+  @apply me-transition px-4 py-1 active:scale-[95%] outline-none ring-0 rounded hover:brightness-95;
+}
+
+.me-gap {
+  @apply gap-4;
+}
+.me-flex-gap {
+  @apply flex me-gap;
+}
+
+.me-flex-col-gap {
+  @apply me-flex-gap;
+}
+
+.me-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.me-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.me-blur-xs {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
